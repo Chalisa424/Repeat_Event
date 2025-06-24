@@ -12,7 +12,7 @@ app.get('/test',(req: Request, res:Response)=>{
     res.send(output);
 })
 
-app.get('/event',(req,res)=> {
+app.get('/events',(req,res)=> {
     res.json(events);
 })
 
