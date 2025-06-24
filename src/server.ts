@@ -3,12 +3,13 @@ const app = express()
 const port = 3000
 
 app.get('/',(req: Request, res:Response)=>{
-    let returnObj = {
-        name: 'John Doe',
-        age: 30,
-        occupation: 'Software Engineer'
-    }
-    res.send(returnObj)
+    res.send('Hello World!')
+})
+
+app.get('/test',(req: Request, res:Response)=>{
+    const id = req.query.id;
+    const output = `id: ${id}`;
+    res.send(output);
 })
 
 app.listen(port, () =>{
