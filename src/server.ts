@@ -13,7 +13,9 @@ app.get('/test',(req: Request, res:Response)=>{
 })
 
 app.get('/events',(req,res)=> {
-    res.json(events);
+    const category = req.query.category;
+    const filteredEvents = events.filter((event) => event.category === category);
+    res.json(filteredEvents);
 })
 
 app.listen(port, () =>{
