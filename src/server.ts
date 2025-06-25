@@ -1,6 +1,6 @@
 import express, {Request, Response} from 'express';
-import type { Event } from './models/Event.ts';
-import { getEventByCategory, getAllEvents,getEventById, addEvent } from './repository/EventRepository.js';
+import type { Event } from './models/Event';
+import { getEventByCategory, getAllEvents,getEventById, addEvent } from './repository/EventRepository';
 
 const app = express()
 app.use(express.json())
