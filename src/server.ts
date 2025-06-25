@@ -2,6 +2,8 @@ import express, {Request, Response} from 'express';
 const app = express()
 const port = 3000
 
+app.use(express.json())
+
 app.get('/',(req: Request, res:Response)=>{
     res.send('Hello World!')
 })
@@ -28,6 +30,12 @@ app.get('/events/:id',(req,res)=>{
     }
 })
 
+app.post('/events',(req,res) =>{
+  const newEvent : Event = req.body;
+  newEvent.id = events.length + 1;
+  events.push(newEvent);
+  res.json(newEvent);
+})
 
 app.listen(port, () =>{
     console.log(`App listening at http://localhost:${port}`)
