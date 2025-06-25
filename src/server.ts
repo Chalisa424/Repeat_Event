@@ -21,7 +21,7 @@ app.get('/test',(req: Request, res:Response)=>{
 app.get('/events',async (req,res)=> {
     if (req.query.category) {
         const category = req.query.category  as string;
-        const filteredEvents = await getEventByCategry(category as string);
+        const filteredEvents = await getEventByCategory(category as string);
         res.json(filteredEvents);
     } else {
         res.json(await getAllEvents());
