@@ -69,7 +69,7 @@ const events: Event[] = [{
 
 }]
 
-export function getEventByCategry(category : string): Promise<Event[]>{
+export function getEventByCategory(category : string): Promise<Event[]>{
      const filteredEvents = events.filter((event)=> event.category === category);
      return Promise.resolve(filteredEvents);
 }
