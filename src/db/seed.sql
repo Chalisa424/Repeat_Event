@@ -1,4 +1,4 @@
-INSERT INTO Event (category, title, description, location, date, time, petAllowed, organizer) VALUES
+INSERT INTO Events (category, title, description, location, date, time, petAllowed, organizer) VALUES
 ('Music', 'Concert in the Park', 'Join us for a free concert featuring local bands.', 'Central Park', '2023-10-15', '18:00', TRUE, 'City Events Committee'),
 ('Art', 'Art Exhibition', 'Local artists showcase their latest works.', 'Downtown Gallery', '2023-11-01', '10:00', FALSE, 'Art Lovers Association'),
 ('Sports', 'Community Soccer Match', 'Friendly soccer match for all ages.', 'Riverside Field', '2023-09-20', '15:00', TRUE, 'Youth Sports Club'),
